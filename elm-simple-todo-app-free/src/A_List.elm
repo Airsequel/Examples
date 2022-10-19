@@ -16,8 +16,7 @@ import RemoteData exposing (RemoteData(..))
 
 
 dbId : String
-dbId =
-    "01gfkrx7cw0tq8ahgyjdry1pk8"
+dbId = -- TODO
 
 
 graphqlApiUrl : String

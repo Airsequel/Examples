@@ -15,13 +15,12 @@ import RemoteData exposing (RemoteData(..))
 
 
 dbId : String
-dbId =
-    "01gfpa0wn8pekcm60ysb7m5bp5"
+dbId = -- TODO
 
 
 graphqlApiUrl : String
 graphqlApiUrl =
-    "https://airsequel.fly.dev/dbs/" ++ dbId ++ "/graphql"
+    "https://www.airsequel.com/dbs/" ++ dbId ++ "/graphql"
 
 
 type alias TodoItem =
