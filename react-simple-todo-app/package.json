@@ -1,0 +1,35 @@
+{
+  "name": "react-simple-todo-app",
+  "version": "0.0.1",
+  "description": "Task manager powered by Airsequel",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "lint": "eslint --max-warnings=0 --ignore-path=.gitignore ."
+  },
+  "author": "Adrian Sieber",
+  "dependencies": {
+    "@apollo/client": "^3.5.8",
+    "graphql": "^16.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.0",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.3",
+    "eslint": "^8.8.0",
+    "eslint-config-javascript": "^2.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "webpack": "^5.68.0",
+    "webpack-dev-server": "^4.7.4"
+  }
+}

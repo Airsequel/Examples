@@ -17,3 +17,9 @@ The code for Airsequel Free is in
 [elm-simple-todo-app-free/src](./elm-simple-todo-app-free/src)
 and for Airsequel Enterprise in
 [elm-simple-todo-app-enterprise/src](./elm-simple-todo-app-enterprise/src).
+
+
+## Simple Todo App with React
+
+More documentation in it's dedicated
+[readme.md](./react-simple-todo-app/readme.md).
