@@ -1,0 +1,101 @@
+lowdefy: 3.23.3
+name: Lowdefy Dashboard for Airsequel
+
+connections:
+  - id: graphql_api
+    type: AxiosHttp
+    properties:
+      baseURL: https://www.airsequel.com
+
+pages:
+  - id: characters_page
+    type: PageHeaderMenu
+    properties:
+      menu:
+        links:
+          - pageId: characters_page
+            type: MenuLink
+            properties:
+              title: Characters
+              icon: UserOutlined
+    requests:
+      - id: characters_request
+        type: AxiosHttp
+        connectionId: graphql_api
+        properties:
+          url: /dbs/avatar_the_last_airbender/graphql
+          method: post
+          data:
+            query: |
+              query GetCharacters {
+                characters {
+                  name,
+                  height_in_cm,
+                  wikipedia
+                }
+              }
+
+    events:
+      onEnter:
+        - id: fetch_characters
+          type: Request
+          params: characters_request
+
+        - id: set_characters
+          type: SetState
+          params:
+            character_list:
+              _request: characters_request.data.data.characters
+
+    blocks:
+      - id: title_main
+        type: Title
+        properties:
+          content: Characters
+
+      - id: block_id_$
+        type: EChart
+        properties:
+          option:
+            dataset:
+              source:
+                _state: character_list
+            xAxis:
+              type: category
+            yAxis:
+              type: value
+            series:
+              - type: bar
+                encode:
+                  x: name
+                  y: height_in_cm
+
+      - id: character_list
+        type: List
+        blocks:
+          - id: character_container_$
+            type: Box
+            style:
+              background: white
+              margin: 10
+              padding: 10
+            blocks:
+              - id: character_title_$
+                type: Title
+                properties:
+                  level: 3
+                  content:
+                    _state: character_list.$.name
+
+              - id: character_anchor_$
+                type: Anchor
+                properties:
+                  newTab: true
+                  title:
+                    _string.replace:
+                      on:
+                        _state: character_list.$.wikipedia
+                      regex: 'https://'
+                      newSubstr: ''
+                  href:
+                    _state: character_list.$.wikipedia
