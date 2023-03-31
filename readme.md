@@ -1,7 +1,7 @@
 # Airsequel Examples
 
 Collection of simple example apps
-to get your started with app development for Airsequel.
+to get you started with app development for Airsequel.
 
 
 ## Simple Todo App in Elm
