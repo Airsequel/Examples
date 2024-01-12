@@ -1,0 +1,9 @@
+/.psa*
+/.psc*
+/.pulp-cache
+/.purs*
+/.spago
+/generated-docs
+/index.js
+/node_modules
+/output

@@ -1,0 +1,14 @@
+package:
+  name: function
+  dependencies:
+    - argonaut-core
+    - console
+    - effect
+    - prelude
+  test:
+    main: Test.Main
+    dependencies: []
+workspace:
+  package_set:
+    registry: 47.13.0
+  extra_packages: {}

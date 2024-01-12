@@ -1,0 +1,8 @@
+{
+  "type": "module",
+  "devDependencies": {
+    "esbuild": "^0.19.11",
+    "purescript": "^0.15.14",
+    "spago": "^0.93.22"
+  }
+}
