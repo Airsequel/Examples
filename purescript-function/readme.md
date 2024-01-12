@@ -37,9 +37,9 @@ following additional steps are executed by `make bundle`:
     ```
 1. Prefix imports with `node:`:
     ```diff
-    - import __module from 'node:module';
-    - import __path from 'node:path';
-    - import __url from 'node:url';
+    - import __module from 'module';
+    - import __path from 'path';
+    - import __url from 'url';
     + import __module from 'node:module'
     + import __path from 'node:path'
     + import __url from 'node:url'
